@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "lambdacontrols",
+  "name": "LambdaControls",
+  "version": "${version}",
+  "description": "Adds better controls, and controller support.",
+  "authors": [
+    "LambdAurora"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/lambdacontrols",
+    "sources": "https://github.com/LambdAurora/LambdaControls.git",
+    "issues": "https://github.com/LambdAurora/LambdaControls/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/lambdacontrols/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "dev.lambdaurora.lambdacontrols.LambdaControls"
+    ],
+    "client": [
+      "dev.lambdaurora.lambdacontrols.client.LambdaControlsClient"
+    ],
+    "modmenu": [
+      "dev.lambdaurora.lambdacontrols.client.LambdaControlsModMenu"
+    ]
+  },
+  "accessWidener": "lambdacontrols.accesswidener",
+  "mixins": [
+    "lambdacontrols.mixins.json",
+    "lambdacontrols_compat.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": ">=0.36.0",
+    "minecraft": ">=1.17",
+    "spruceui": ">=3.2.0",
+    "java": ">=16"
+  },
+  "recommends": {
+    "modmenu": ">=1.12.2"
+  },
+  "suggests": {
+    "flamingo": "*"
+  },
+  "breaks": {
+    "modmenu": "<1.12.2",
+    "optifabric": "*"
+  },
+  "custom": {
+    "modupdater": {
+      "strategy": "curseforge",
+      "projectID": 354231
+    }
+  }
+}
